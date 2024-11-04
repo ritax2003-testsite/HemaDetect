@@ -10,7 +10,7 @@ from PIL import Image,ImageDraw
 import cv2
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
-
+import gc
 # Load the model
 model = load_model(r'./models/FinalQ_efficientnet_model.keras')
 
@@ -37,7 +37,7 @@ def cnn_predict(request):
     
         # Print prediction and confidence
         #print(f"Prediction: {class_label} (Confidence: {confidence:.2f}%)")
- 
+        gc.collect()
 
         return Response({
             'Prediction': class_label,
