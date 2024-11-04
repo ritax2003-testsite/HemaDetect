@@ -17,7 +17,7 @@ model = load_model(r'./models/FinalQ_efficientnet_model.keras')
 @api_view(['GET','POST'])
 def cnn_predict(request):
     if request.method == 'GET':
-        return Response({"message": "This endpoint accepts images in a POST request for prediction."})
+        return Response({"message": "This endpoint accepts images in a POST request for prediction.Created by Sumit, Ritabrata, Patrika and Titli for Btech Final year project."})
     if request.method == 'POST':
         if 'image' not in request.FILES:
             return Response({"error": "No image provided"}, status=400)
