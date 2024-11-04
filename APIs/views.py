@@ -14,8 +14,11 @@ from tensorflow.keras.preprocessing.image import img_to_array
 # Load the model
 model = load_model(r'./models/FinalQ_efficientnet_model.keras')
 
-@api_view(['POST'])
+@api_view(['GET','POST'])
 def cnn_predict(request):
+    if request.method == 'GET':
+        return Response({"message": "This endpoint accepts images in a POST request for prediction."})
+
     if 'image' not in request.FILES:
         return Response({"error": "No image provided"}, status=400)
     print(request.data)
