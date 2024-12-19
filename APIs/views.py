@@ -49,7 +49,7 @@ def preprocess_image(img_path):
 def cnn_predict(request):
     global model  # Declare model as global to access the global model variable
     if request.method == 'GET':
-        return Response({"message": "This endpoint accepts images in a POST request for prediction."})
+        return Response({"message": "This endpoint accepts images in a POST request for prediction. Created By Patrika, Titli, Sumit, Ritabrata as part of BTech CSE final year Project."})
     if request.method == 'POST':
         if 'image' not in request.FILES:
             return Response({"error": "No image provided"}, status=400)
