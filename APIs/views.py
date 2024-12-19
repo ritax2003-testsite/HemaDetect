@@ -30,7 +30,7 @@ model.fc = nn.Sequential(
 )
 
 # Load the model's state dictionary
-model.load_state_dict(torch.load(r'models\blood_cancer_model.pth', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load(r'./models/blood_cancer_model.pth', map_location=torch.device('cpu')))
 model.eval()  # Set the model to evaluation mode
 
 # Define the transformation
