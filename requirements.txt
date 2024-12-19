@@ -1,7 +1,7 @@
 numpy
-opencv-python
-django
-djangorestframework
 pillow
 django-cors-headers
-tensorflow
+django
+djangorestframework
+torch
+torchvision
