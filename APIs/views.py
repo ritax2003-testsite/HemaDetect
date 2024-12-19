@@ -4,16 +4,12 @@ from rest_framework.response import Response
 
 import torch
 from torchvision import transforms
-import torch
 from torchvision.models import googlenet, GoogLeNet_Weights
 import torch.nn as nn
 
-import numpy as np
-import os
-import io
-from PIL import Image,ImageDraw
-import cv2
+from PIL import Image
 import gc
+
 
 # Load the model
 # Create an instance of the model
